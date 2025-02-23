@@ -46,7 +46,7 @@ else:
 	print("Failed to retrieve app details")
 
 ### PART 3
-# when we try to access the url we recieve this error : {"errors": [{"type": "missing", "loc": ["aptoide_uid"], "msg": "Field required"}]}
+# when we try to access the url we receive this error : {"errors": [{"type": "missing", "loc": ["aptoide_uid"], "msg": "Field required"}]}
 # the error message indicates that the aptoide_uid parameter is missing from the URL. We need to add this parameter with a dummy value to the URL. so we add &aptoide_uid=dummy_value.
 
 download_url = "https://aptoide-mmp.aptoide.com/api/v1/download/b2VtaWQ9VGVjaENoYWxsZW5nZVB5dGhvbiZwYWNrYWdlX25hbWU9Y29tLmZ1bi5sYXN0d2FyLmdwJnJlZGlyZWN0X3VybD1odHRwczovL3Bvb2wuYXBrLmFwdG9pZGUuY29tL2FwcHMvY29tLWZ1bi1sYXN0d2FyLWdwLTk5OTk5LTY2NjEyOTMwLWE3MThmOWZlMjE5OGM1Y2EyYzIwMmUwNDYzZTVkZDk1LmFwaw==?resolution=1080x1776&aptoide_uid=dummy_value"

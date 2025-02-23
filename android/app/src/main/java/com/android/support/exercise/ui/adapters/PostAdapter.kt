@@ -27,7 +27,10 @@ class PostAdapter : RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
         holder.bind(post)
     }
 
-    override fun getItemCount(): Int = 0
+    // There is a critical issue in PostAdapter that is causing the posts not to show up. The problem lies in the getItemCount() method
+    // This method is returning 0, which means the RecyclerView thinks there are no items to display.
+    // To fix it the getItemCount() method should return the size of the postList:
+    override fun getItemCount(): Int = postList.size
 
     override fun getItemId(position: Int): Long {
         return postList[position].id.toLong()

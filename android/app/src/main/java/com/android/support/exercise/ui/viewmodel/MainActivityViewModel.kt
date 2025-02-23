@@ -10,6 +10,7 @@ import com.android.support.exercise.network.RetrofitClient
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import android.util.Log
 
 
 class MainActivityViewModel : ViewModel() {
@@ -30,10 +31,12 @@ class MainActivityViewModel : ViewModel() {
         CoroutineScope(Dispatchers.IO).launch {
             try {
                 val posts = RetrofitClient.apiService.getPosts()
+                Log.d("MainActivityViewModel", "Posts fetched: ${posts.size}")
                 CoroutineScope(Dispatchers.Main).launch {
                     _posts.value = posts.toCollection(arrayListOf())
                 }
             } catch (e: Exception) {
+                Log.e("MainActivityViewModel", "Error loading posts", e)
                 e.printStackTrace()
             }
         }

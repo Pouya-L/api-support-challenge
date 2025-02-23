@@ -157,7 +157,7 @@ The posts were not showing up in the RecyclerView.
 
 **File**: `PostAdapter.kt`  
 **Fix**:
-The `getItemCount()v method was returning `0`, causing the RecyclerView to display no items. Updated it to return the size of the `postList`.
+The `getItemCount()` method was returning `0`, causing the RecyclerView to display no items. Updated it to return the size of the `postList`.
 ```kotlin
 override fun getItemCount(): Int = postList.size
 ```

@@ -170,10 +170,10 @@ override fun getItemCount(): Int = postList.size
 
 ## Dependencies
 
-**Retrofit2**: For network communication.
-**Glide**: For image loading.
-**Room**: For local database storage.
-**Coroutines**: For asynchronous programming.
+1. **Retrofit2**: For network communication.
+2. **Glide**: For image loading.
+3. **Room**: For local database storage.
+4. **Coroutines**: For asynchronous programming.
 
 ## Conclusion
 This task was a great opportunity to practice debugging and fixing common Android development issues. By addressing problems related to UI initialization, database configuration, permissions, and RecyclerView setup, the app is now functional and follows the requirements.
